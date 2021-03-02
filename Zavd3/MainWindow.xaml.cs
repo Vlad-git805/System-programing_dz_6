@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,10 +15,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace zavd1
+namespace Zavd3
 {
     public partial class MainWindow : Window
     {
+        static CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
+        CancellationToken token = cancelTokenSource.Token;
         public int sentences_count = 0;
         public int characters_count;
         public int interrogative_sentences_count = 0;
@@ -61,7 +64,6 @@ namespace zavd1
         {
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-
                 string temp_string = Textbox.Text;
                 temp_string = temp_string.Replace(" ", "");
                 characters_count = temp_string.Length;
@@ -85,7 +87,6 @@ namespace zavd1
         {
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-
                 for (int i = 0; i < Textbox.Text.Length; i++)
                 {
                     if (Textbox.Text[i] == '?')
@@ -101,7 +102,6 @@ namespace zavd1
         {
             Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-
                 for (int i = 0; i < Textbox.Text.Length; i++)
                 {
                     if (Textbox.Text[i] == '!')
@@ -121,23 +121,38 @@ namespace zavd1
                 if (radiobt1.IsChecked == true)
                 {
                     List<string> arr = new List<string>();
-                    arr.Add($"Sentences count: {sentences_count}");
-                    arr.Add($"Characters count: {characters_count}");
-                    arr.Add($"Interrogative sentences count: {interrogative_sentences_count}");
-                    arr.Add($"Exclamation points count: {exclamation_points_count}");
+                    if (CheckBox1.IsChecked == true)
+                        arr.Add($"Sentences count: {sentences_count}");
+                    if (CheckBox2.IsChecked == true)
+                        arr.Add($"Characters count: {characters_count}");
+                    if (CheckBox3.IsChecked == true)
+                        arr.Add($"Interrogative sentences count: {interrogative_sentences_count}");
+                    if (CheckBox4.IsChecked == true)
+                        arr.Add($"Exclamation points count: {exclamation_points_count}");
                     list_box.ItemsSource = arr;
                 }
                 else if (radiobt2.IsChecked == true)
                 {
+                    string str = null;
                     using (StreamWriter sw = new StreamWriter("zavd1.txt", false, System.Text.Encoding.Default))
                     {
-                        sw.Write($"Sentences count: {sentences_count}\n" +
-                        $"Count characters count: {characters_count}\n" +
-                        $"Count interrogative sentences count: {interrogative_sentences_count}\n" +
-                        $"Exclamation points count: {exclamation_points_count}\n");
+                        if (CheckBox1.IsChecked == true)
+                            str += $"Sentences count: {sentences_count}\n";
+                        if (CheckBox2.IsChecked == true)
+                            str += $"Count characters count: {characters_count}\n";
+                        if (CheckBox3.IsChecked == true)
+                            str += $"Count interrogative sentences count: {interrogative_sentences_count}\n";
+                        if (CheckBox4.IsChecked == true)
+                            str += $"Exclamation points count: {exclamation_points_count}\n";
+                        sw.Write(str);
                     }
                 }
             }));
+        }
+
+        private void pause_Click(object sender, RoutedEventArgs e)
+        {
+            cancelTokenSource.Cancel();
         }
     }
 }

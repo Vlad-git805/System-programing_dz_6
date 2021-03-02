@@ -1,0 +1,15 @@
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\bin\Debug\Zavd3.exe.config
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\bin\Debug\Zavd3.exe
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\bin\Debug\Zavd3.pdb
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\Zavd3.csprojAssemblyReference.cache
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\MainWindow.g.cs
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\App.g.cs
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\Zavd3_MarkupCompile.cache
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\Zavd3_MarkupCompile.lref
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\MainWindow.baml
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\Zavd3.g.resources
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\Zavd3.Properties.Resources.resources
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\Zavd3.csproj.GenerateResource.cache
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\Zavd3.csproj.CoreCompileInputs.cache
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\Zavd3.exe
+D:\ШАГ\System programming\dz\dz6\zavd1\Zavd3\obj\Debug\Zavd3.pdb
