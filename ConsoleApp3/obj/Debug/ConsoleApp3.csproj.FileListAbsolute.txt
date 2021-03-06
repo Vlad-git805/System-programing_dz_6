@@ -1,0 +1,6 @@
+D:\ШАГ\System programming\dz\dz6\zavd1\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+D:\ШАГ\System programming\dz\dz6\zavd1\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+D:\ШАГ\System programming\dz\dz6\zavd1\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+D:\ШАГ\System programming\dz\dz6\zavd1\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+D:\ШАГ\System programming\dz\dz6\zavd1\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+D:\ШАГ\System programming\dz\dz6\zavd1\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
