@@ -14,22 +14,33 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="42*"></RowDefinition>
+            <RowDefinition Height="56*"></RowDefinition>
+            <RowDefinition Height="54*"></RowDefinition>
+            <RowDefinition Height="97*"></RowDefinition>
+            <RowDefinition Height="112*"></RowDefinition>
+            <RowDefinition Height="59*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0" Content="Select a folder source:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="19"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Name="analisfolder" Height="28" Width="323" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="20"/>
-        <Button Grid.Row="0" Grid.Column="3"  Content="Open Folder" FontSize="22" Height="50" Width="150" Click="Button_Click"/>
-        
-        <Label Grid.Row="1" Grid.Column="0" Content="Enter country:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="19"/>
-        <TextBox Name="Country_text_box" Grid.Row="1" Grid.Column="1" Height="28" Width="323" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="20"/>
+        <Menu Name="Delete_element_menu" Margin="0,0,0.4,17.6">
+            <MenuItem Header="Select proces" FontSize="15">
+                <MenuItem Header="Show all resumes" Click="Show_all_resumes_click"></MenuItem>
+                <MenuItem Header="Resume with the biggest experience" Click="Resume_with_the_biggest_experience_click"></MenuItem>
+                <MenuItem Header="Resume with the lowest experience" Click="Resume_with_the_lowest_experience_click"></MenuItem>
+                <MenuItem Header="Resume with the biggest seller needs" Click="Resume_with_the_biggest_seller_needs_click"></MenuItem>
+                <MenuItem Header="Resume with the lowest seller needs" Click="Resume_with_the_lowest_seller_needs_click"></MenuItem>
+                <MenuItem Header="Show resume with the same country" Click="Show_resume_with_the_same_country"></MenuItem>
+            </MenuItem>
+        </Menu>
 
-        <ListBox Name="list_box" Margin="15" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4"></ListBox>
-        <Button x:Name="start"  Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2"  Content="Start" FontSize="22" Height="50" Width="180" Click="start_Click"/>
-        <Button x:Name="show_all_resums"  Grid.Row="4" Grid.Column="0"  Content="Show all resums" FontSize="22" Height="50" Width="180" Click="Show_all_resums_Click"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Select a folder source:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="19" Height="36" Margin="2,15.4,2.4,4.6" Width="194"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="analisfolder" Height="28" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="20" Margin="36.6,19.4,37.2,8.6"/>
+        <Button Grid.Row="1" Grid.Column="3"  Content="Open Folder" FontSize="22" Click="Button_Click" Margin="23.8,8.4,24.6,13.6"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Enter country:" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="19" Height="35" Margin="36,11.4,36.4,8" Width="126"/>
+        <TextBox Name="Country_text_box" Grid.Row="2" Grid.Column="1" Height="28" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="20" Margin="36.6,14.4,37.2,12"/>
+
+        <ListBox Name="list_box" Margin="15,16,14.6,14.8" Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="4"></ListBox>
+        <Button x:Name="start"  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"  Content="Ot4et" FontSize="22" Click="start_Click" Margin="48.6,10.2,48.2,10"/>
     </Grid>
 </Window>
